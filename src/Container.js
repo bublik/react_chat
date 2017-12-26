@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import {Navbar, Jumbotron, Button, Scrollspy} from 'react-bootstrap';
+import {Button, Scrollspy} from 'react-bootstrap'; //Navbar, Jumbotron,
 
 class Container extends Component {
     render() {
         return (
             <div className="col-9 Container">
-                <div>Chanel Name</div>
+                <div>Chanel Name [TODO]</div>
                 <div>
-                    Messages list
                     Container text
                     <Button className="btn-danger">Danger</Button>
                     <Button className="btn-info">Info</Button>

@@ -2,6 +2,8 @@
   "name": "chat",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://github.com/bublik/react_chat",
+  "proxy": "http://localhost:9292",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-loader": "^2.0.0-beta.12",

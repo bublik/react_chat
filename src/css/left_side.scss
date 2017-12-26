@@ -3,15 +3,43 @@
 
 .LeftSide {
   height: 100%;
-  background-color: $navbar-light-color;
   padding: 0;
+  border-right: 1px solid $gray-100;
+  background-color: $gray-100;
 }
 
+
+.Channels, .DirectMessages {
+  margin-bottom: 0.5rem;
+  .title {
+    font-weight: bold;
+  }
+  ul {
+    @extend .list-group;
+    padding: 0;
+    border: 0;
+    li {
+      @extend .list-group-item;
+      @extend .list-group-item-action;
+      padding: 0.25rem;
+      margin: 0;
+      border: 0;
+    }
+  }
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1em;
+}
+
+.btn-circle {
+  height: 1.5rem;
+  font-size: 0.9rem;
+  padding: 0 0.4rem;
+  border-radius: 1.5em;
+  border-bottom-width: 2px;
 }
