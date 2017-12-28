@@ -2,20 +2,24 @@
   "name": "chat",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://github.com/bublik/react_chat",
+  "homepage": "https://github.com/bublik/react_chat",
   "proxy": "http://localhost:9292",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-loader": "^2.0.0-beta.12",
     "jquery": "^1.9.1",
     "jshint": "^2.9.5",
+    "lodash": "^4.17.4",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "popper.js": "^1.12.9",
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6"
   },
@@ -35,6 +39,7 @@
     "gulp-notify": "^3.0.0",
     "gulp-notify-growl": "^1.0.2",
     "jscs": "2.2.1",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "redux-devtools": "^3.4.1"
   }
 }

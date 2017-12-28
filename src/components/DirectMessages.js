@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
+//import { connect } from 'react-redux';
 import {Button} from 'react-bootstrap';
-const ROOMS_PATH = '/rooms.json';
+
+const USERS_PATH = '/users.json';
 
 class DirectMessages extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      rooms: [],
+      users: [],
       isLoading: false,
       error: null
     };
@@ -15,10 +17,10 @@ class DirectMessages extends Component {
 
   handleClick() {
     console.log(this); // null
-  };
+  }
 
-  fetch_rooms() {
-    fetch(ROOMS_PATH,
+  fetch_users() {
+    fetch(USERS_PATH,
       {
         method: 'GET',
         //mode: 'no-cors',
@@ -32,32 +34,31 @@ class DirectMessages extends Component {
           throw new Error('Something went wrong ...');
         }
       })
-      .then(data => this.setState({rooms: data, isLoading: false}))
+      .then(data => this.setState({users: data, isLoading: false}))
       .catch(error => this.setState({error, isLoading: false}));
   };
-
   componentDidMount() {
     this.setState({isLoading: true});
-    this.fetch_rooms();
+    this.fetch_users();
   };
 
   render() {
-    const { rooms, isLoading, error } = this.state;
+    const { users, isLoading, error } = this.state;
     var status = null;
 
     if (error) { status = <p>{error.message}</p>; }
     if (isLoading) { status = <p>Loading ...</p>; }
 
-    const listRooms = rooms.map((room) =>
-      <li key={room['id']} className={room['id']} onClick={this.handleClick}>
-        {room['name']}
+    const listUsers = users.map((user) =>
+      <li key={user['id']} className={user['id']} onClick={this.handleClick}>
+        {user['name']}
       </li>
     );
 
     return (
-      <div className="Channels">
-        <div className="clearfix title">Rooms <Button className="btn-info btn-circle float-right">+</Button></div>
-        <ul className="">{listRooms}</ul>
+      <div className="DirectMessages">
+        <div className="clearfix title">Direct messages <Button className="btn-info btn-circle float-right">+</Button></div>
+        <ul className="">{listUsers}</ul>
         <div>{status}</div>
       </div>
     )

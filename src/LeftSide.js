@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-
 import logo from './logo.svg';
-import Channels from './Channels';
-import DirectMessages from './DirectMessages';
+import ChannelContainer from './containers/ChannelContainer';
+import DirectMessages from './components/DirectMessages';
 
 class LeftSide extends Component {
   constructor(props) {
@@ -14,8 +13,8 @@ class LeftSide extends Component {
       <div className="LeftSide col-3">
         <img src={logo} className="App-logo" alt="logo"/>
         <h5 className="App-title">Welcome to React</h5>
-        <Channels/>
-        <DirectMessages/>
+        <ChannelContainer />
+        <DirectMessages />
       </div>
     )
   }

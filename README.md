@@ -2,6 +2,10 @@ For run application need run two commands.
 - npm run
 - npm run watch-cs
 
+install module and add to package.js
+
+- npm install --save react-redux
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

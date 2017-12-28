@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import LeftSide from './LeftSide';
 import Container from './Container';
+
 import './css/App.scss';
 
 class App extends Component {
